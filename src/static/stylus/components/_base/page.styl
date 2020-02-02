@@ -1,0 +1,78 @@
+// Основа
+body
+    font-family 'ubuntu'
+    font-weight 400
+    font-size 16px
+    line-height 1.5
+    color #f0f0f0
+    // background-color darkslategray
+    background #2f4f4f url(/assets/images/logo/main-logo.png) 0.5% 5% no-repeat
+    background-size 100px
+
+// Выделение текста
+::-moz-selection
+    text-shadow none
+    background-color blue
+    color #fff
+
+::selection
+    text-shadow none
+    background-color blue
+    color #fff
+
+// Страница и прижатие футера
+// Наследуемся именно через ".cssall", так как в IE присутствуют баги при рендеринге флексбоксов
+.page
+    min-height 100%
+    .cssall &
+        display flex
+        flex-direction column
+    &__main
+    &__inner
+        .cssall &
+            flex-grow 1
+    &__left
+    &__right
+        height 100%
+    &__left
+        float left
+        width 72%
+        background-color #888
+    &__right
+        width 28%
+        float right
+        background-color #999
+.info
+    text-align center
+    font-size 32px
+
+// Адаптивная обёртка
+.wrapper
+    clearfix()
+    margin auto
+    width $desktop
+    +below($point-1)
+        width $tablet
+        padding 0 10px
+    +below($point-2)
+        padding 0 5px
+        min-width $iphone
+        max-width $iphoneVI
+        width 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

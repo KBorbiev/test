@@ -1,0 +1,24 @@
+extends template/base-index.pug
+block page-title
+    title Validate User
+block main
+    +b.validate-user
+        +e.wrapper.wrapper
+            +e.form
+                +b.form-validate-user
+                    form(name="validate_user")
+                        +e.P.info
+                            | Проверьте себя в реестре введите номер паспорта <span> или </span> номер свидетельство о рождения
+                        +e.form-body
+                            +e.left
+                                +e.item
+                                    input(type="text" name="value_pass" placeholder="Для паспорта ID/AN ")
+                            +e.right
+                                +e.item
+                                    input(type="text" name="value_sert" placeholder="Для свидетельство КР-Х № ")
+                            +e.bottom
+                                +e.BUTTON.button.btn.btn__add Проверить
+                                +b.P.response-true
+                                    | Вы можете <a href="user-registration.html"> пройти регистрацию </a>
+                                +b.P.response-false
+                                    | Вы не можете пройти регистрацию

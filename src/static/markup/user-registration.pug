@@ -1,0 +1,190 @@
+extends template/base-index.pug
+block page-title
+    title Registration
+block main
+    +b.registration
+        +e.wrapper.wrapper
+            +e.form
+                form(action="#")
+                    +e.page-1
+                        +e.top
+                            +e.top-left
+                                +e.H2.title
+                                    | Регистрация шаг - 1
+                            +e.top-right
+                                +b.lang-select
+                                    +e.P.text
+                                        | Выберите язык: 
+                                        a(href="#" class="js-lang-kg") Кырг
+                                        a(href="#" class="js-lang-ru") Русс
+                        +e.middle
+                            +e.middle-left
+                                +e.item
+                                    span Имя
+                                    input(type="text" name="user_name" required minlength="4" placeholder="Имя")
+                                +e.item
+                                    span Фамилия
+                                    input(type="text" name="user_last_name" required minlength="6" placeholder="Фамилия")
+                                +e.item
+                                    span Дата рождения
+                                    input(type="text" name="user_born" required class="js-datepicker" placeholder="Дата рождения")
+                                +e.item
+                                    span Номер телефона
+                                    input(type="text" name="user_phone"  required class="js-mask-phone" placeholder="Ваш номер телефона")
+                                +e.item
+                                    span Номер родителя
+                                    input(type="text" name="user_phone_2" required class="js-mask-phone" placeholder="Номер родителя")
+                                +e.item
+                                    span Адрес по прописке
+                                    input(type="text" name="user_adress" required minlength="10" placeholder="Адрес по прописке")
+                                +e.item
+                                    span Фактический адрес
+                                    input(type="text" name="user_adress" required minlength="10" placeholder="Бишкек Ул.Ахунбаева 128А")
+                            +e.middle-right
+                                +e.item
+                                    span Выберите область
+                                    select(name="user_regions" size="0")
+                                        option(selected disabled value="Не известно") Выберите область
+                                        option(value="Чуй") Чуй
+                                        option(value="Ыссык-Кол") Ыссык-Кол
+                                        option(value="Нарын") Нарын
+                                        option(value="Талас") Талас
+                                        option(value="Ош") Ош
+                                        option(value="Джалал-Абад") Джалал-Абад
+                                        option(value="Баткен") Баткен
+                                +e.item
+                                    span Семейное положения
+                                    select(name="user_family_status" class="js-show-additional-question" required size="0")
+                                        option(selected disabled value="Не известно") Семейное положения
+                                        option(value="Холост") Холост
+                                        option(value="Женат") Женат
+                                        option(value="Разведен") Разведен
+                                        option(value="Вдовец") Вдовец
+                                    +b.additional-question
+                                        +e.level-1.hide
+                                            span Есть ли дети?
+                                            select(name="user_have_children" class="js-user-have-children" size="0")
+                                                option(selected disabled value="Не известно") Есть ли дети?
+                                                option(value="Дети есть") Да
+                                                option(value="Дети нет") Нет
+                                        +e.level-2.hide
+                                            input(type="text" name="user_have_boys"  required class="js-mask-children js-user-children" placeholder="Сколько мальчиков?")
+                                            input(type="text" name="user_have_girls" required class="js-mask-children js-user-children" placeholder="Сколько девочек?")
+                                +e.item
+                                    span Тип гемофилии
+                                    select(name="user_type_hemophili" class="js-show-additional-question" size="0")
+                                        option(selected disabled value="Не известно") Тип гемофилии
+                                        option(value="А") А
+                                        option(value="Б") Б
+                                        option(value="Велибрант") Велибрант
+                                    +b.additional-question
+                                        +e.level-1.hide
+                                            span Где выявили гемофилию?
+                                            select(name="user_hemophilia_revealed" size="0")
+                                                option(selected disabled value="Не известно") Где выявили гемофилию?
+                                                option(value="Чуй") Чуй
+                                                option(value="Ыссык-Кол") Ыссык-Кол
+                                                option(value="Нарын") Нарын
+                                                option(value="Талас") Талас
+                                                option(value="Ош") Ош
+                                                option(value="Джалал-Абад") Джалал-Абад
+                                                option(value="Баткен") Баткен
+                                +e.item
+                                    span Наследственность
+                                    select(name="user_heredity" size="0")
+                                        option(selected disabled value="Не известно") Наследственность:
+                                        option(value="Да") Да
+                                        option(value="Нет") Нет
+                                        option(value="Не знаю") Не знаю
+                                +e.item
+                                    span Было ли у Вас гепатит ?
+                                    select(name="user_hepatitis" class="js-show-additional-question" size="0")
+                                        option(selected disabled value="Не известно") Было ли у Вас гепатит?
+                                        option(value="Гепатит было") Гепатит было
+                                        option(value="Гепатит не было") Гепатит не было
+                                        option(value="Гепатит не знаю") Не знаю
+                                    +b.additional-question
+                                        +e.level-1.hide
+                                            span Тип гепатита
+                                            select(name="user_have_hepatitis" size="0")
+                                                option(selected disabled value="Не известно") Тип гепатита
+                                                option(value="A") A
+                                                option(value="B") B
+                                                option(value="C") C
+                                                option(value="E") E
+                                                option(value="D") D
+                                            span Лечение гепатита
+                                            select(name="user_treatment_hepatitis" class="" size="0")
+                                                option(selected disabled value="Не известно") Лечение гепатита
+                                                option(value="Да") Да
+                                                option(value="Нет") Нет
+                                            span Есть ли сейчас гепатит ?
+                                            select(name="user_have_hepatitis_now" class="" size="0")
+                                                option(selected disabled value="Не известно") Есть ли сейчас гепатит
+                                                option(value="Да") Да
+                                                option(value="Нет") Нет
+                                        +e.level-2.hide
+                                            span Принимали крио или плазму?
+                                            select(name="user_have_cryo_plasma" class="" size="0")
+                                                option(selected disabled value="Не известно") Принимали крио или плазму?
+                                                option(value="Да") Да
+                                                option(value="Нет") Нет
+                                +e.item
+                                    span Какие суставы ограничены в движении
+                                    select(name="user_joints" size="0")
+                                        option(selected disabled value="Не известно") Какие суставы ограничены в движении
+                                        option(value="Правая колена") Правая колена
+                                        option(value="Левая колена") Левая колена
+                                        option(value="Правая локоть") Правая локоть
+                                +e.item
+                                    span Ингибитор
+                                    select(name="user_inhibitor" size="0")
+                                        option(selected disabled value="Ингибитор") Ингибитор
+                                        option(value="Не знаю") Не знаю
+                                        option(value="Нет") Нет
+                                        option(value="Да") Да
+                        +e.bottom
+                            +e.A(href="#").button.js-show-next-form.btn.btn__next Следующая
+                    +e.page-2.hide
+                        +e.top
+                            +e.top-left
+                                +e.H2.title
+                                    | Регистрация шаг - 2
+                        +e.middle
+                            +e.middle-left
+                                +e.item
+                                    span Номер паспорта или свид-во о рождения
+                                    input(type="text" name="user_pass_id" required placeholder="ID1234567 или КР-Х №1234567")
+                                +e.item
+                                    span Укажите родственников с гемофилией
+                                    input(type="text" name="user_relatives" placeholder="Укажите родственников с гемофилией")
+                                +e.item
+                                    span Процент фактора в крови
+                                    input(type="text" name="user_factor_percentage" required placeholder="Процент фактора в крови")
+                                +e.item
+                                    span Когда выяснилось гемофилия ?
+                                    input(type="text" name="user_appeared_hemophilia" required class="js-datepicker" placeholder="Когда выяснилось гемофилия")
+                            +e.middle-right
+                                +e.item
+                                    span У вас есть работа?
+                                    select(name="user_job" size="0")
+                                        option(selected disabled value="Не известно") У вас есть работа?
+                                        option(value="Да, я работаю") Д, я работаюа
+                                        option(value="Нет, я не работаю") Нет, я не работаю
+                                +e.item
+                                    span Оброзование
+                                    select(name="user_education" size="0")
+                                        option(selected disabled value="Не известно") Оброзование
+                                        option(value="Школьник") Школьник (Закончил или учусь)
+                                        option(value="Средний") Средний (Университет)
+                                        option(value="Высший") Высший (ВУЗ)
+                                +e.item
+                                    span Используете костыль или палочку ?
+                                    select(name="user_use_crutch" size="0")
+                                        option(selected disabled value="Не известно") Используете костыль или палочку ?
+                                        option(value="Использую костыль") Использую костыль
+                                        option(value="Использую палочку") Использую палочку
+                                        option(value="Ничего не использую") Ничего не использую
+                        +e.bottom
+                            +e.BUTTON.button.btn.btn__send Отправить 
+                            +e.A(href="#").button.js-show-prev-form.btn.btn__prev Предыдущая 

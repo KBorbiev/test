@@ -1,0 +1,555 @@
+// ====== Базовые подключения
+@import 'components/_base/_variables'
+@import 'components/_base/_mixins'
+
+@import 'components/_base/page'
+
+// ====== Все компоненты
+@import 'components/*'
+
+// ====== Вёрстка
+
+$col-size = 16.66%
+$col-tb-size = 25%
+$col-mb-size = 33.3333%
+
+.col
+    display inline-block
+    font-size 16px
+    width 100%
+    height 100%
+    vertical-align top
+    &-1
+        width $col-size
+    &-2
+        width $col-size*2
+    &-3
+        width $col-size*3
+    &-4
+        width $col-size*4
+    &-5
+        width $col-size*5
+    &-6
+        width $col-size*6
+    &-tb
+        &-1
+            +below($point-1)
+                width $col-tb-size
+        &-2
+            +below($point-1)
+                width $col-tb-size*2
+        &-3
+            +below($point-1)
+                width $col-tb-size*3
+        &-4
+            +below($point-1)
+                width $col-tb-size*4
+    &-mb
+        &-1
+            +below($point-2)
+                width $col-mb-size
+        &-2
+            +below($point-2)
+                width $col-mb-size*2
+        &-3
+            +below($point-2)
+                width $col-mb-size*3
+.response-true a
+    color blue
+    text-decoration underline
+
+.patients
+    // 
+    &__list
+        padding-top 10px
+        margin-bottom 35px
+    &__item
+        font-size 0
+        padding 10px
+        border 1px solid
+        border-bottom none
+        &:last-child
+            border-bottom 1px solid
+            +below($point-2)
+                border none
+        +below($point-1)
+            border-right none
+            border-left none
+        +below($point-2)
+            border none
+            padding 0
+            margin-bottom 45px
+    &__col
+        min-height 130px
+        position relative
+        overflow hidden
+        padding-right 10px
+        border-right 1px solid
+        +below($point-1)
+            padding 0
+            border none
+        +below($point-2)
+            position static
+            min-height 0
+            padding-right 0
+            border-right none
+    &__image
+        max-height 130px
+        height 100%
+        transition all 0.45s ease-in-out
+        &:hover
+            transform scale(1.2)
+        +below($point-2)
+            max-height 200px
+    & p
+        padding 0px 0px 4px 10px
+        +below($point-2)
+            padding 0
+    & p:last-child
+        margin 0
+    &__link
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+        &:hover
+            transform scale(1.05) translate(-50%,-50%)
+        +below($point-1)
+            padding 2.5% 10%
+        +below($point-2)
+            position static
+            top 0
+            left 0
+            transform none
+            display block
+            margin 12px 0 5px
+
+// PAGINATION
+.pagination
+    // 
+    &__list
+        font-size 0
+        text-align center
+    &__item
+        display inline-block
+        padding 0px 4px
+    &__link
+        display block
+        font-size 16px
+        font-weight 600
+        background-color cadetblue
+        padding 0.5em 0.9em
+        transition all 0.23s ease-in-out
+        &:hover
+            background-color #73c6c8
+            transform scale(1.03)
+
+
+// USER
+.user
+    // 
+    &__top
+        display flex
+        margin-bottom 35px
+        border-bottom 1px solid #f0f0f0
+        padding-top 120px
+        +below($point-2)
+            flex-wrap wrap
+        &-left
+            width 17%
+            +below($point-1)
+                width 27%
+            +below($point-2)
+                width 100%
+                display flex
+                justify-content center
+                flex-wrap wrap
+                margin-bottom 12px
+        &-right
+            flex auto
+            & p
+                margin-bottom 2px
+                padding-left 15px
+                +below($point-2)
+                    margin 0
+                    padding 0
+    &__bottom
+        display flex
+        align-items flex-start
+        +below($point-2)
+            flex-direction column
+        &-left
+            width 70%
+            display flex
+            flex-wrap wrap
+            +below($point-2)
+                width 100%
+        &-right
+            width 30%
+            padding-left 10px
+            +below($point-2)
+                width 100%
+                padding 0
+    &__image
+        //
+        +below($point-2)
+            width 100%
+    &__certificate,
+    &__id
+        text-align center
+        line-height normal
+    &__box
+        width 33.33%
+        padding-bottom 30px
+        border-bottom 1px solid #f0f0f0
+        +below($point-1)
+            font-size 14px
+            padding-right 5px
+        +below($point-2)
+            padding 0
+            width 100%
+            padding-bottom 20px
+            border none
+    &__name
+        font-size 17px
+    &__family
+        padding-top 35px
+        +below($point-2)
+            padding-top 10px
+    &__ul-list
+        // 
+        & li
+            position relative
+            margin-left 25px
+            font-size 14px
+            &::before
+                content '';
+                display block
+                position absolute
+                top 50%
+                left -18px
+                width 10px
+                height 2px
+                background-color #3cb371
+                transform translateY(-50%)
+
+// VZNOS
+.vznos-user
+    &__top
+        // 
+    &__info
+        font-size 22px
+        text-align center
+        padding-bottom 16px
+        +below($point-2)
+            position relative
+            &::before
+                content ""
+                display block
+                position absolute
+                top -5px
+                right 50%
+                transform translateX(50%)
+                width 60px
+                height 4px
+                background-color #3cb371
+    &__bottom
+        // display flex
+    &__item
+        display flex
+        margin-bottom 16px
+        border-bottom 1px solid #f0f0f0
+        padding-bottom 10px
+        &:nth-child(odd)
+            +below($point-1)
+                background-color #2a4545
+        +below($point-1)
+            padding 0.5em
+            flex-direction column
+        +below($point-2)
+            margin-bottom 30px
+    &__left
+        // 
+    &__right
+        padding-left 15px
+        +below($point-1)
+            padding-left 0
+    &__image
+        width 160px
+        height 110px
+        +below($point-1)
+            width 100%
+    &__date-start
+        // 
+    &__date-finish
+        // 
+    &__summ
+        // 
+    &__receipt
+        // 
+        +below($point-1)
+            width 100%
+            margin-top 10px
+
+
+/******************************/
+/****** VALIDDATE-USER ********/
+/******************************/
+.validate-user
+    padding-top 80px
+    +below($point-2)
+        padding-top 150px
+    &__form
+        // 
+.form-validate-user
+    & form
+        max-width 640px
+        margin 0 auto
+        background #f4f5f7
+        border-radius 20px
+        padding 20px 0 32px
+        // padding 6.5rem 2rem 2rem
+        // box-shadow 1px 1px 10px rgba(0,0,0,0.05)
+        // color #a8aac5
+        color #2f4f4f
+    &__info
+        text-align center
+        font-size 20px
+        font-weight bold
+        line-height normal
+        // color #2f4f4f
+        & span
+            display block
+        +below($point-2)
+            font-size 16px
+    &__form-body
+        display flex
+        justify-content center
+        flex-wrap wrap
+        padding-top 22px
+    &__left
+        width 50%
+        padding 0 20px
+        +below($point-2)
+            width 95%
+            padding 0
+    &__right
+        width 50%
+        padding 0 20px
+        +below($point-2)
+            width 95%
+            padding 0
+    &__bottom
+        text-align center
+    &__item
+        padding-bottom 22px
+    &__button
+        padding 0.5em 4em
+        font-size 17px
+        color #f0f0f0
+    & input
+        border-radius 5px
+        height 3rem
+        padding 1rem
+        width 100%
+        border 1px solid transparent
+        font-weight bold
+        color #2f4f4f
+        &::placeholder
+            color #2f4f4f
+        &:focus
+            // outline 1px solid red
+            border 1px solid #2f4f4f
+
+
+/*************************/
+/****  REGISTRATION   ****/
+/*************************/
+.registration
+    padding-top 80px
+    +below($point-1)
+        padding-top 130px
+    &__page-1.hide,
+    &__page-2.hide
+        display none
+    & .response-true,
+    & .response-false
+        font-size 15px
+        display inline-block
+        padding 0 0 0 6px
+        vertical-align baseline
+    &__form
+        width 52em
+        margin 0 auto
+        background-color #3cb371
+        padding 2.5em 1.7em
+        border-radius 10px
+        +below($point-1)
+            width 100%
+        +below($point-2)
+            padding 1em 0.5em
+    &__top
+        font-size 0
+        padding-bottom 20px
+        &-left
+            display inline-block
+            width 50%
+            +below($point-2)
+                width 100%
+                padding-bottom 20px
+        &-right
+            display inline-block
+            width 50%
+            +below($point-2)
+                width 100%
+    &__middle
+        display flex
+        flex-direction row
+        +below($point-2)
+            flex-direction column
+        &-left
+            width 50%
+            padding-right 14px
+            +below($point-2)
+                width 100%
+                padding 0
+        &-right
+            width 50%
+            padding-left 14px
+            +below($point-2)
+                width 100%
+                padding 0
+    &__bottom
+        text-align right
+    &__title
+        display inline-block
+        font-size 32px
+        font-weight bold
+        // text-align center
+        position relative
+        &::after
+            content ''
+            display block
+            width 120px
+            height 4px
+            background-color #2f4f4f
+            position absolute
+            bottom -5px
+            left 0
+            z-index 1
+        +below($point-2)
+            font-size 20px
+    &__item
+        margin-bottom 27px
+    & input
+        border 1px solid transparent
+        border-radius 5px
+        font-weight bold
+        color black
+        transition border-color .25s ease-in-out
+        &:focus
+            border-color #1a512e
+        &::placeholder
+            color rgba(0, 0, 0, 0.5)
+    & select
+        padding 0.625em
+        background-color #2f4f4f
+        border-color transparent
+        border-radius 5px
+        font-weight bold
+        transition border-color .25s ease-in-out
+        &:focus
+            border-color #9dd9b3
+    &__button
+        &.btn__prev
+            float left
+            +below($point-2)
+                float none
+                width 100%
+                padding 5px 0
+                margin-top 20px
+.lang-select
+    // 
+    &__text
+        font-size 16px
+        text-align right
+        font-weight 500
+        +below($point-2)
+            text-align left
+        & a
+            display inline-block
+            padding 0.1em 0.8em
+            border-radius 5px
+            font-size 16px
+            background-color #f0f0f0
+            color #333
+            font-weight bold
+            margin-left 5px
+            transition .25s ease-in-out
+            &:hover
+                background-color #2f4f4f
+                color #f0f0f0
+
+.additional-question
+    // 
+    & select
+        margin-bottom 3px
+    & input
+        width 49.5%
+        display inline-block
+        padding-top 0.2em
+        padding-bottom 0.2em
+        font-size 14px
+        &::placeholder
+            font-size 14px
+    &__level-1.hide,
+    &__level-2.hide,
+    &__level-3.hide
+        display none
+
+/*************************/
+/****  CUSTOM SELECT  ****/
+/*************************/
+.custom-select
+    // width 200px
+    position relative
+    font-family Arial
+.custom-select select
+    display none
+.select-selected
+    background-color DodgerBlue
+.select-selected:after
+    position absolute
+    content ""
+    top 14px
+    right 10px
+    width 0
+    height 0
+    border 6px solid transparent
+    border-color #fff transparent transparent transparent
+.select-selected.select-arrow-active:after
+    border-color transparent transparent #fff transparent
+    top 7px
+.select-items div,.select-selected
+    color #ffffff
+    padding 8px 16px
+    border 1px solid transparent
+    border-color transparent transparent rgba(0, 0, 0, 0.1) transparent
+    cursor pointer
+    user-select none
+.select-items
+    position absolute
+    background-color DodgerBlue
+    top 100%
+    left 0
+    right 0
+    z-index 99
+.select-hide
+    display none
+.select-items div:hover, .same-as-selected
+    background-color rgba(0, 0, 0, 0.1)
+
+
+
+
+

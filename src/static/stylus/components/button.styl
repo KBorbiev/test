@@ -1,0 +1,80 @@
+.btn
+    display inline-block
+    text-align center
+    transition all 0.23s ease-in-out
+    &__view
+        padding 0.25em 2em
+        background-color mediumseagreen
+        color floralwhite
+        border-radius 4px
+        &:hover
+            background-color #2e9e60
+    &__add
+        padding 0.33em 0.65em
+        background-color cadetblue
+        border-radius 3px
+        &:hover
+            background-color #73c6c8
+            transform scale(1.03)
+    &__search
+        padding 0.8em 2em
+        background-color cadetblue
+        border-radius 3px
+        &:hover
+            background-color #73c6c8
+            transform scale(1.03)
+    &__send
+        background-color #f0f0f0
+        color black
+        font-weight bold
+        padding 0.6em 8.33em
+        border-radius 4px
+        vertical-align top
+        font-size 17px
+        &:hover
+            background-color #216e43
+            color #fff
+        +below($point-1)
+            padding 0.6em 7em
+        +below($point-2)
+            width 100%
+            padding 10px 0
+            font-size 20px
+    &__next
+        padding 0.5em 3em 0.5em 0.5em
+        background-color #2f4f4f
+        border-radius 4px
+        font-weight bold
+        position relative
+        &::after
+            content ''
+            display block
+            position absolute
+            top 50%
+            right 0
+            border-style solid
+            border-width 8px 3px 8px 25px
+            border-color transparent transparent transparent #3cb371
+            transform translateY(-50%)
+            z-index 1
+        &:hover
+            background-color #1a3f3f
+    &__prev
+        padding 0.5em 0.5em 0.5em 3em
+        background-color #2f4f4f
+        border-radius 4px
+        font-weight bold
+        position relative
+        &::after
+            content ''
+            display block
+            position absolute
+            top 50%
+            left 0
+            border-style solid
+            border-width 8px 25px 8px 3px
+            border-color transparent #3cb371 transparent transparent
+            transform translateY(-50%)
+            z-index 1
+        &:hover
+            background-color #1a3f3f

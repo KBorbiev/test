@@ -1,0 +1,40 @@
+.header
+    +below($point-1)
+        margin-bottom 20px
+    &__col
+        font-size 0
+        padding 45px 0 25px
+        +below($point-1)
+            padding 10px 0
+
+.add-user
+    // 
+    &__link
+        //
+
+.search-user
+    +below($point-1)
+        text-align right
+    +below($point-2)
+        text-align left
+        padding 15px 0 0 0
+    &__form
+        // 
+    &__input
+        display inline-block !important
+        width 75% !important
+        padding 0.3em 5px !important
+        transition all 0.23s ease-in-out
+        &:hover,
+        &:focus
+            background-color cadetblue
+        &:focus
+            border-color #97c8e5
+        +below($point-1)
+            width 65% !important
+         +below($point-2)
+            width 69% !important
+            padding-top 0.34em !important
+            padding-bottom 0.34em !important
+    &__search
+        vertical-align top

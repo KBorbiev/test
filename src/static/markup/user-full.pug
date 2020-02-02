@@ -1,0 +1,91 @@
+extends template/base-wide-page.pug
+block page-title
+    title user
+    
+block main
+    +b.user
+        +e.wrapper.wrapper
+            +e.top
+                +e.top-left
+                    +e.image
+                        img(src="/assets/images/users/kairat.jpeg", alt="img")
+                    +e.P.id AN1234567
+                    +e.P.certificate КР-Х № 1234567
+                +e.top-right
+                    +e.P.name Кайрат Борбиев
+                    +e.P.born Дата рождения: 22.10.1997
+                    +e.P.typehemo Тип гемофилии: А
+                    +e.P.phone Личный номер: 0770492618
+                    +e.P.phone Номер родственника: 0770492618
+                    +e.P.family Семейное положения: Холост
+                    +e.P.oblast Область: Чуй
+                    +e.P.adress Адрес по паспорту: Орозбекова 254А
+                    +e.P.pasadres фактический адрес: Орозбекова 254А
+            +e.bottom
+                +e.bottom-left
+                    +e.box
+                        +e.P.education Оброзование: Среднее
+                        +e.P.work Работа: Нет
+                        +e.P.count-relatives Родственники: 4-Мальчика 4-Девочки
+                    +e.box
+                        +e.P.when-turned Когда выяснилось гемофилия: в 3года
+                        +e.P.where-turned Где выяснилось: Бишкек
+                        +e.P.count-factors Процент фактора в крови: 1,7 %
+                    +e.box
+                        +e.P.inhibitor Ингибитор: Нет
+                        +e.P.inheritance Наследственность: Да
+                        +e.P.crutch Исп-те костыль или палочку: Нет
+                    +e.box
+                        +e.P.baby Есть ли дети: Нет
+                        +e.P.count-baby 2-мальчика и 2-девочки
+                        +e.UL.ul-list Родственники с гемофилей:
+                            li Кайрат
+                            li Дастан
+                            li Нурлан
+                    +e.box
+                        +e.P.hepatitis Гепатит: Нет
+                        +e.P.hepatitis-type Тип гепатита: B
+                        +e.P.hepatitis-treat Лечение гепатита: Нет
+                        +e.P.hepatitis-now Есть ли сейчас гепатит: Нет
+                    +e.box
+                        +e.UL.ul-list Какие суставы ограничены в движении:
+                            li Л-колено
+                            li П-колено
+                            li Л-локоть
+                            li П-локоть
+                            li П-стопа
+                +e.bottom-right
+                    +e.vznos
+                        +b.vznos-user
+                            +e.top
+                                +e.P.info Членский взнос
+                            +e.bottom
+                                +e.item
+                                    +e.left
+                                        +e.image
+                                            img(src="/assets/images/users/kairat.jpeg", alt="img")
+                                    +e.right
+                                        +e.P.date-start С 01.01.2020 года
+                                        +e.P.date-finish По 01.01.2021 года
+                                        +e.P.summ Сумма: 1200 сом
+                                        +e.A(href="#").receipt.btn.btn__view Чек
+                                +e.item
+                                    +e.left
+                                        +e.image
+                                            img(src="/assets/images/users/kairat.jpeg", alt="img")
+                                    +e.right
+                                        +e.P.date-start С 01.01.2021 года
+                                        +e.P.date-finish По 01.01.2022 года
+                                        +e.P.summ Сумма: 1200 сом
+                                        +e.A(href="#").receipt.btn.btn__view Чек
+                                +e.item
+                                    +e.left
+                                        +e.image
+                                            img(src="/assets/images/users/kairat.jpeg", alt="img")
+                                    +e.right
+                                        +e.P.date-start С 01.01.2022 года
+                                        +e.P.date-finish По 01.01.2023 года
+                                        +e.P.summ Сумма: 1200 сом
+                                        +e.A(href="#" target="blank").receipt.btn.btn__view Чек
+
+

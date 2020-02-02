@@ -1,0 +1,50 @@
+extends template/base-wide.pug
+block page-title
+    title Main
+
+block main
+    +b.patients
+        +e.wrapper.wrapper
+            h1.info Список пациентов
+            +e.list
+                +e.item
+                    +e.col.col.col-1.col-mb-3
+                        +e.IMG(src="assets/images/users/kairat.jpeg").image
+                    +e.col.col.col-4.col-mb-3
+                        +e.P.name Кайрат Борбиев
+                        +e.P.born Дата рождения: 01.01.1997
+                        +e.P.hemo Гемофилия: B
+                        +e.P.number Номер: 0770-49-26-18
+                    +e.col.col.col-1.col-mb-3
+                        +e.A(href="#").link.btn.btn__view Подробнее
+                +e.item
+                    +e.col.col.col-1.col-mb-3
+                        +e.IMG(src="assets/images/users/kairat.jpeg").image
+                    +e.col.col.col-4.col-mb-3
+                        +e.P.name Кайрат Борбиев
+                        +e.P.born Дата рождения: 01.01.1997
+                        +e.P.hemo Гемофилия: B
+                        +e.P.number Номер: 0770-49-26-18
+                    +e.col.col.col-1.col-mb-3
+                        +e.A(href="#").link.btn.btn__view Подробнее
+                +e.item
+                    +e.col.col.col-1.col-mb-3
+                        +e.IMG(src="assets/images/users/kairat.jpeg").image
+                    +e.col.col.col-4.col-mb-3
+                        +e.P.name Кайрат Борбиев
+                        +e.P.born Дата рождения: 01.01.1997
+                        +e.P.hemo Гемофилия: B
+                        +e.P.number Номер: 0770-49-26-18
+                    +e.col.col.col-1.col-mb-3
+                        +e.A(href="#").link.btn.btn__view Подробнее
+                +e.item
+                    +e.col.col.col-1.col-mb-3
+                        +e.IMG(src="assets/images/users/kairat.jpeg").image
+                    +e.col.col.col-4.col-mb-3
+                        +e.P.name Кайрат Борбиев
+                        +e.P.born Дата рождения: 01.01.1997
+                        +e.P.hemo Гемофилия: B
+                        +e.P.number Номер: 0770-49-26-18
+                    +e.col.col.col-1.col-mb-3
+                        +e.A(href="#").link.btn.btn__view Подробнее
+    include components/pagination.pug
