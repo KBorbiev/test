@@ -620,3 +620,10 @@
   .datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
     background: none;
     border: none; }
+
+.datepicker--nav-title {
+    background: #c7c7c7;
+}
+.datepicker--nav-title:hover {
+    background: #a2a2a2;
+}

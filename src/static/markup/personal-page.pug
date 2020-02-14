@@ -1,0 +1,35 @@
+extends template/base-wide-page.pug
+block page-title
+    title Персональная страница
+
+block main
+    +b.personal-page
+        +e.wrapper.wrapper
+            +e.top
+                .col.col-4
+                    +e.H1.name Кайрат Борбиев
+                .col.col-2
+                    +e.BUTTON.btn.btn.btn__out Выйти
+            +e.main
+                +e.left
+                    +e.injections
+                        +b.injections-form
+                            form(action="#")
+                                +e.body
+                                    +e.H3.title Инъекции
+                                    +e.item
+                                        label(for="inj-date") Дата:
+                                        input(type="text" id="inj-date" required class="js-datepicker" placeholder="Введите дату")
+                                    +e.item
+                                        label(for="inj-cause") Причина:
+                                        input(type="text" id="inj-cause" placeholder="Что болит")
+                                    +e.item
+                                        label(for="inj-dose") Доза:
+                                        input(type="text" id="inj-dose" placeholder="1200ME")
+                                    +e.item
+                                        label(for="inj-lot") Номер лота:
+                                        input(type="text" id="inj-lot" placeholder="123456789")
+                                +e.BUTTON.btn.btn.btn__send Сообщить об инхекции
+                +e.right
+                    +e.image
+                        img(src="/assets/images/users/kairat.jpeg", alt="")
